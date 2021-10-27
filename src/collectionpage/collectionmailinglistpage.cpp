@@ -59,7 +59,7 @@ void CollectionMailingListPage::init(const Akonadi::Collection &col)
 
     auto topLayout = new QFormLayout(this);
 
-    mHoldsMailingList = new QCheckBox(i18n("Folder holds a mailing list"), this);
+    mHoldsMailingList = new QCheckBox(i18n("Folder holds a mailing list (only one, and nothing else)"), this);
     connect(mHoldsMailingList, &QCheckBox::toggled, this, &CollectionMailingListPage::slotHoldsML);
     connect(mHoldsMailingList, &QCheckBox::toggled, this, &CollectionMailingListPage::slotConfigChanged);
     topLayout->addRow(QString(), mHoldsMailingList);
